@@ -2,6 +2,16 @@
     #Main Styles
 \*------------------------------------*/
 
+html, 
+body, 
+.container {
+	height: 100%;
+}
+
+body {
+	position: relative;
+}
+
 .circle {
 	height: 60px;
 	width: 60px;
@@ -10,4 +20,8 @@
 	border-radius: 50%;
 	text-transform: uppercase;
 	font-weight: 500;
+	background-color: #049372;
+	color: #fff;
+	position: absolute;
+	font-size: 36px;
 }
