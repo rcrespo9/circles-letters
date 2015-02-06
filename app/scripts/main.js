@@ -21,25 +21,28 @@ app.circles = (function() {
 				var $this = $(this);
 				var $circle = $('<div/>');
 				var $circleForm = $('#circle-form');
+				var $circleFormValue = $circleForm.val();
 
 				var posX = e.pageX;
 				var posY = e.pageY;
 
-				// append circles
-				$this.append(
-					$circle
-					.addClass('circle')
-					.text($circleForm.val()[0])
-					.css({
-				        left: posX,
-				        top: posY
-			    	})
-				);
+				if($circleFormValue.length) {
+					// append circles
+					$this.append(
+						$circle
+						.addClass('circle')
+						.text($circleFormValue[0])
+						.css({
+					        left: posX,
+					        top: posY
+				    	})
+					);
 
-				// delete characters as circles are appended
-				$circleForm.val(function(index,value) {
-					return value.substr(1);
-				});   				
+					// delete characters as circles are appended
+					$circleForm.val(function(index,value) {
+						return value.substr(1);
+					});
+				} 				
 	
 			});
 		}
