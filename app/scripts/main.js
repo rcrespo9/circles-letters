@@ -17,15 +17,29 @@ app.circles = (function() {
 
 		createCircles: function() {
 			s.theBody.on('click', function(e) {
+
 				var $this = $(this);
 				var $circle = $('<div/>');
+				var $circleForm = $('#circle-form');
+
 				var posX = e.pageX;
 				var posY = e.pageY;
 
-				$this.append($circle.addClass('circle').css({
-			        left: posX,
-			        top: posY
-			    }));    				
+				// append circles
+				$this.append(
+					$circle
+					.addClass('circle')
+					.text($circleForm.val()[0])
+					.css({
+				        left: posX,
+				        top: posY
+			    	})
+				);
+
+				// delete characters as circles are appended
+				$circleForm.val(function(index,value) {
+					return value.substr(1);
+				});   				
 	
 			});
 		}
