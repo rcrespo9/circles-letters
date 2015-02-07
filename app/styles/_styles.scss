@@ -20,13 +20,13 @@ body,
 	font-weight: 700;	
 }
 
-.circle, .call-to-action {
-	font-size: 36px;
-	text-align: center;	
-}
-
 .circle, .row {
 	position: absolute;
+}
+
+.circle {
+	font-size: 36px;
+	text-align: center;	
 }
 
 #circle-form {
