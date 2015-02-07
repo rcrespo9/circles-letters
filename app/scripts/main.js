@@ -30,7 +30,7 @@ app.circles = (function() {
 					// append circles
 					$this.append(
 						$circle
-						.addClass('circle')
+						.addClass('circle touchstart')
 						.text($circleFormValue[0])
 						.css({
 					        left: posX,

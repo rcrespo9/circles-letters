@@ -2,4 +2,18 @@
     #Custom Variables
 \*------------------------------------*/
 
-$font-family-sans-serif: 'raleway', Helvetica, Arial, sans-serif;
+$font-family-sans-serif: 'Lato', Helvetica, Arial, sans-serif;
+
+$text-color: #222;
+
+// //** Text color for `<input>`s
+$input-color: $text-color;
+
+// //** `<input>` border color
+$input-border: $text-color;
+
+//** Border color for inputs on focus
+$input-border-focus: $input-border;
+
+// //** Placeholder text color
+$input-color-placeholder: $text-color;

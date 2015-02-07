@@ -8,23 +8,46 @@ body,
 	height: 100%;
 }
 
-body {
+body, 
+.container,
+#circle-form {
 	position: relative;
 }
 
-.circle, input {
+.circle,
+.call-to-action {
 	text-transform: uppercase;
-	font-weight: 500;
-	font-size: 36px;	
+	font-weight: 700;	
+}
+
+.circle, .call-to-action {
+	font-size: 36px;
+	text-align: center;	
+}
+
+.circle, .row {
+	position: absolute;
+}
+
+#circle-form {
+	z-index: 9999;
+}
+
+.row {
+	position: absolute;
+	top: 50%;
+	left: 0;
+	right: 0;
+	height: 46px;
+	margin-top: -23px;
 }
 
 .circle {
 	height: 60px;
 	width: 60px;
 	line-height: 60px;
-	text-align: center;
 	border-radius: 50%;
-	background-color: #049372;
+	background-color: #CF000F;
 	color: #fff;
 	position: absolute;
 }
