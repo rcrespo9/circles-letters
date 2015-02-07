@@ -16,7 +16,7 @@ app.circles = (function() {
 		},
 
 		createCircles: function() {
-			s.theBody.on('touchstart click', function(e) {
+			s.theBody.on('click', function(e) {
 
 				var $this = $(this);
 				var $circle = $('<div/>');
@@ -25,6 +25,8 @@ app.circles = (function() {
 
 				var posX = e.pageX;
 				var posY = e.pageY;
+
+				e.preventDefault();
 
 				if($circleFormValue.length) {
 					// append circles
