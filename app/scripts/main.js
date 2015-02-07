@@ -16,7 +16,7 @@ app.circles = (function() {
 		},
 
 		createCircles: function() {
-			s.theBody.on('click', function(e) {
+			s.theBody.on('touchstart click', function(e) {
 
 				var $this = $(this);
 				var $circle = $('<div/>');
@@ -30,7 +30,7 @@ app.circles = (function() {
 					// append circles
 					$this.append(
 						$circle
-						.addClass('circle touchstart')
+						.addClass('circle')
 						.text($circleFormValue[0])
 						.css({
 					        left: posX,
